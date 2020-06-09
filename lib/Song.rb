@@ -18,6 +18,4 @@ save
   @@all.clear
   end
 
-
-
 end
