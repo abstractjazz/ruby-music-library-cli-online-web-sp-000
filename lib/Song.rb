@@ -19,4 +19,8 @@ save
   @@all.clear
   end
 
+  def self.create
+  initialize
+  self 
+
 end
