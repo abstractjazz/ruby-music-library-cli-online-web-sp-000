@@ -1,6 +1,17 @@
 class Song
-attr_accessor: name, songs
+attr_accessor :name
+@@all = [ ]
+
   def initialize
 
   end
+
+def self.all
+  @@all
+end
+
+def self.reset_all
+  @@all.clear
+end 
+
 end
