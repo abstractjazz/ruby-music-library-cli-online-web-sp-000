@@ -20,7 +20,7 @@ save
   end
 
   def self.create
-  initialize
+  initialize(name)
   self
   end
-end 
+end
