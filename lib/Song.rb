@@ -15,7 +15,7 @@ save
   @@all
   end
 
-  def self.reset_all
+  def self.destrpy_all
   @@all.clear
   end
 
