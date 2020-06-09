@@ -6,16 +6,18 @@ attr_accessor :name
 save
   end
 
-def self.all
+  def save
+  @@all << self
+  end
+
+  def self.all
   @@all
-end
+  end
 
-def self.reset_all
+  def self.reset_all
   @@all.clear
-end
+  end
 
-def save
-@@all << self 
-end
+
 
 end
