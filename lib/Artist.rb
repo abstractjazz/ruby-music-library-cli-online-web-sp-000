@@ -1,5 +1,5 @@
 class Artist
-attr_accessor :name, :songs 
+attr_accessor :name, :songs
 
   def initialize
   save
@@ -16,6 +16,7 @@ attr_accessor :name, :songs
   def self.reset_all
   @@all.clear
   end
+
 
 
 
