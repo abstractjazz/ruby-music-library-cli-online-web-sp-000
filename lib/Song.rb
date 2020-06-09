@@ -1,4 +1,7 @@
 class Song
+
+extend Findable 
+
 attr_accessor :name, :songs
 @@all = [ ]
 
