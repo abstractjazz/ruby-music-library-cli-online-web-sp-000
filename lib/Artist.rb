@@ -17,7 +17,7 @@ attr_accessor :name, :songs
   @@all.clear
   end
 
-
+def self.count 
 
 
 end
