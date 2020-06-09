@@ -3,7 +3,7 @@ attr_accessor :name
 @@all = [ ]
 
   def initialize
-save 
+save
   end
 
 def self.all
@@ -12,6 +12,10 @@ end
 
 def self.reset_all
   @@all.clear
+end
+
+def save
+@@all << self 
 end
 
 end
