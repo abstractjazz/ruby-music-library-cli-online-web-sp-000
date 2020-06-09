@@ -21,5 +21,6 @@ save
 
   def self.create
   initialize
-  self 
-end
+  self
+  end
+end 
