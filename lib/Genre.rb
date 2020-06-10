@@ -1,24 +1,25 @@
-class Genre
-extend Findable 
+class Genre < Super
 
-attr_accessor :name, :songs
+  attr_accessor :songs
 
-  def initialize
-save
+  def initialize(name)
+    @name = name
+    @songs = []
   end
 
-  def save
-  @@all << self
+  def self.create(name)
+		instance = Genre.new(name)
+		instance.save
+		instance
+	end
+
+  def add_song(song)
+    song.genre = self if song.genre == nil
+    self.songs << song if self.songs.include?(song) == false
   end
 
-  def self.all
-  @@all
+  def artists
+    self.songs.collect{|song|song.artist}.uniq
   end
-
-  def self.reset_all
-  @@all.clear
-  end
-
-
 
 end
