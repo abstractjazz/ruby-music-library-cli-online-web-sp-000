@@ -5,7 +5,7 @@ extend Concerns::Findable
 
 @@all = [ ]
 
-  def initialize(name, artist=nil, genre=nil)
+  def initialize(name, artist, genre)
     @name = name
     @genre = genre
     @artist = artist
