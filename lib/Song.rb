@@ -9,10 +9,9 @@ extend Concerns::Findable
     @name = name
     @genre = genre
     @artist = artist
-    @@all << self 
+    @@all << self
   end
-end
-end
+
 
   def save
   @@all << self
