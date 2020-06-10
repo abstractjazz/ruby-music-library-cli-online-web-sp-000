@@ -1,30 +1,25 @@
-class Artist
-extend Findable 
+class Artist < Super
 
-attr_accessor :name, :songs
+  attr_accessor :songs
 
-  def initialize
-  save
+  def initialize(name)
+		@name = name
+    @songs = []
+	end
+
+  def self.create(name)
+		instance = Artist.new(name)
+		instance.save
+		instance
+	end
+
+  def genres
+    self.songs.map {|song|song.genre}.uniq
   end
 
-  def save
-  @@all << self
+  def add_song(song)
+    song.artist = self if song.artist == nil
+    self.songs << song if self.songs.include?(song) == false
   end
-
-  def self.all
-  @@all
-  end
-
-  def self.reset_all
-  @@all.clear
-  end
-
-def self.count
-@@all.size
-end
-
-# def find_by_name(name)
-#     @@all.detect {|artist| artist.name = name}
-# end
 
 end
