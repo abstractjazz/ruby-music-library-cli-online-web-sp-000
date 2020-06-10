@@ -33,8 +33,5 @@ def self.create(song)
   song
 end
 
-def artist
-  @artist
-end 
 
 end
