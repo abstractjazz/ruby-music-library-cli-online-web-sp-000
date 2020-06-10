@@ -1,11 +1,11 @@
 class Song
-
-extend Findable 
-
 attr_accessor :name, :songs
+
+extend Concerns::Findable
+
 @@all = [ ]
 
-  def initialize(name)
+  def initialize(name, artist=nil, genre=nil)
     @name = name
 save
   end
