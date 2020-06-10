@@ -11,8 +11,6 @@ extend Concerns::Findable
     self.genre=(genre) if genre != nil
   end
 end
-end
-end 
 
   def save
   @@all << self
