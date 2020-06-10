@@ -1,4 +1,6 @@
 class Artist
+extend Findable 
+
 attr_accessor :name, :songs
 
   def initialize
@@ -21,8 +23,8 @@ def self.count
 @@all.size
 end
 
-def find_by_name(name)
-    @@all.detect {|artist| artist.name = name}
-end
+# def find_by_name(name)
+#     @@all.detect {|artist| artist.name = name}
+# end
 
 end
