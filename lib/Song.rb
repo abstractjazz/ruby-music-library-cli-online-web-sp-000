@@ -7,7 +7,9 @@ extend Concerns::Findable
 
   def initialize(name, artist=nil, genre=nil)
     @name = name
-save
+    self.artist=(artist) if artist !=nil
+    self.genre=(genre) if genre != nil
+    
   end
 
   def save
