@@ -10,6 +10,8 @@ extend Concerns::Findable
     self.artist=(artist) if artist !=nil
     self.genre=(genre) if genre != nil
   end
+end
+end 
 
   def save
   @@all << self
