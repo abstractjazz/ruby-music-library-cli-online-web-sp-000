@@ -1,5 +1,8 @@
 class Genre
+extend Findable 
+
 attr_accessor :name, :songs
+
   def initialize
 save
   end
