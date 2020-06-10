@@ -9,7 +9,6 @@ extend Concerns::Findable
     @name = name
     self.artist=(artist) if artist !=nil
     self.genre=(genre) if genre != nil
-    
   end
 
   def save
