@@ -23,15 +23,14 @@ extend Concerns::Findable
   @@all.clear
   end
 
-def save
+  def save
   @@all << self
-end
+  end
 
-def self.create(song)
+  def self.create(song)
   song = self.new(song)
   song.save
   song
-end
-
+  end
 
 end
