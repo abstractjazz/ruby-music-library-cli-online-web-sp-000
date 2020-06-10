@@ -31,6 +31,10 @@ def self.create(song)
   song = self.new(song)
   song.save
   song
+end
+
+def artist
+  @artist
 end 
 
 end
